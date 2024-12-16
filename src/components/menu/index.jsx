@@ -38,6 +38,35 @@ const Menu = styled.header`
     &>div img{
         width: 200px;
     }
+    
+    & span{
+        display: none;
+    }
+
+    @media screen and (max-width:1000px){
+            padding: 0 50px;
+
+        &>nav{
+            justify-content: flex-end !important;
+        }
+
+        & span{
+            display: block;
+
+            font-size: 30px;
+            color: white;
+        }
+        & nav a{
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width:500px){
+        padding: 0 25px;
+    }
+
+
 
     ${props => props.$theme==="white"? (
         `
@@ -59,7 +88,7 @@ const Menu = styled.header`
         }   
     
         & nav a:last-child{
-            border: 1px solid rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.75);
             padding: 5px;
         }
     
@@ -143,7 +172,7 @@ function MenuC() {
             <div>
                 <a href="#home"><img src={scroll ? "assets/images/logo.png" :"assets/images/logoB.png"} alt="" /></a>
             </div>
-            <nav>
+            <nav className="menu">
                 <a href="#home">HOME</a>
                 <a href="#sobre">QUEM SOMOS</a>
                 <a href="#produtos">NOSSOS SERVIÇOS</a>
@@ -151,6 +180,7 @@ function MenuC() {
                 <a href="#">BLOG</a>
                 <a href="#">CONTATO</a>
             </nav>
+            <span>&#9776;</span>
         </Menu>
     );
 }
