@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Images from "./Images.jsx";
-import { Circulo, Circulos } from "./circulos.jsx";
+import { Circulo, Circulos } from "./Circulos.jsx";
 
 
 
