@@ -105,7 +105,12 @@ const Menu = styled.header`
         & nav a:hover{
             color:white;
             border-color: white;
-        }`
+        }
+        
+        & span{
+            color: black;
+        }
+        `
     )
     : `    
         & a{
